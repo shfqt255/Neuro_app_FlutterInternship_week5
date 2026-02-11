@@ -50,7 +50,7 @@ class NoteProviders extends ChangeNotifier {
   String _searchQuery = '';
 
   List<Note> get notes {
-    if (_searchQuery.isNotEmpty) {
+    if (_searchQuery.isEmpty) {
       return _notes;
     }
     return _notes.where((note) {
